@@ -1,0 +1,13 @@
+DEJAR EL RUNSERVER CON PUERTO:
+
+manage.py runserver localhost:8000
+
+pip install social-auth-app-django
+pip install python-social-auth
+pip install Pylint
+
+
+
+USUARIO ADMINISTRADOR:
+USER:ADMIN
+PASS:ADMIN
