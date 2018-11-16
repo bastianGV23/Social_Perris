@@ -6,8 +6,11 @@ pip install social-auth-app-django
 pip install python-social-auth
 pip install Pylint
 
-
-
 USUARIO ADMINISTRADOR:
 USER:ADMIN
 PASS:ADMIN
+
+CUENTA DE FACEBOOK:
+
+USER: asdanation1@gmail.com
+PASS: bastian45
