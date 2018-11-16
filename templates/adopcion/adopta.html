@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% block title %}Adoptar mascota{% endblock %}
+{% block content %}
+<form method="POST" enctype='multipart/form-data' class="Articulo2-2 col-12">
+   
+    <div class="container-fluid p-5">
+        <div class="row">
+            <div class="col-12">
+                <h2>Deseea adoptar a esta mascota  ?</h2>
+            </div>
+            <img class="img-fluid p-2 "  style="border-style: solid;border-width: 2"  src="{{adop.id_perro.imagen.url}}" alt="">
+           <div class="form-group">
+                {% csrf_token %}
+                {{form}}
+           </div>
+           <input class="btn btn-primary btn-block btn-success" value="Si" type="submit">
+        </div>
+    </div>
+</form>
+{% endblock %}

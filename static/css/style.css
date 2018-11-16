@@ -1,0 +1,109 @@
+
+*
+{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+.custom-toggler.navbar-toggler {
+    border-color: black;
+}
+
+header
+{
+    background-color:#79F3C8;
+}
+.rescateL
+{
+    background-color:#79F3C8; 
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.nav-link
+{
+  margin: 0 12px;
+  color: whitesmoke;
+ font-weight: 600;
+  
+}
+.nav-link:hover
+{
+  background: whitesmoke;
+  color:black; 
+}
+.navbar-toggler:hover
+{
+background: white;
+
+}
+.navbar-brand:hover
+{
+opacity: 0.2;
+}
+.Seccion1
+{
+    background-color: #58E2B2; 
+    
+}
+div.social img
+{
+    width: 40px;
+    height: 40px;
+}
+div.social a
+{
+   
+    padding: 0 12px;
+}
+div.social a:hover
+{
+    opacity: 0.4;
+}
+.campaña
+{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    border: black solid 1px;
+    padding: 12px 10px;
+
+}
+.campaña:hover
+{
+    opacity: 0.4;
+}
+.Seccion2 h2{
+    color: black;
+font-size: 30px;
+font-weight: bold;
+margin: 7px 0px;
+}
+@media screen and (max-width: 380px)
+{
+    .navbar-toggler
+    {
+        margin:auto;
+    }
+
+}
+@media screen and (max-width: 991px) {
+
+.galeria .contenedor-imagen:nth-child(1) {order: 1;}
+.galeria .contenedor-imagen:nth-child(2) {order: 3;}
+ .galeria .contenedor-imagen:nth-child(3) {order: 6;}
+ .galeria .contenedor-imagen:nth-child(5) {order: 5;}
+.galeria .contenedor-imagen:nth-child(6) {order: 4;}
+.galeria .contenedor-imagen:nth-child(7) {order: 7;}
+}
+
+
+.Articulo2-2
+{  
+        background-image: url(http://minimal-wallpapers.com/wp-content/uploads/2015/09/dog-minimalistic-wallpaper-light.png);
+}
+.galeria .contenedor-imagen {
+	margin-bottom: 40px;
+	max-height: 500px;
+    overflow: hidden;
+    border: black 1px solid;
+}

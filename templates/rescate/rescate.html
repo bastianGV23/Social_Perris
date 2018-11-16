@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block title %}Rescate{% endblock %}
+{% block content %}
+    
+    {% for resc in rescata  %}
+       <div class="row  text-md-left text-center mt-5 mb-2 pt-3 border border-success">
+            
+           <div class="col-lg-4 col-md-4 offset-lg-1  ">
+            {% if resc.imagen %}
+            <img class="img-fluid mb-2" src="{{resc.imagen.url}}" alt="">
+           {% endif %}
+           </div>
+           <div class="col-lg-7 col-md-8 ">
+                <h2 class="section-heading title">{{resc.nombrePerro}}</h2>
+                <p>Raza del perrito: {{resc.razaP}}</p>
+                <p>Descripcion: {{resc.descripcion}}</p>
+                <p>Estado del perrito: {{resc.estado}}</p>
+                <a name="boton"  id="" class="btn btn-danger" href="{% url 'rescate:r_delete' resc.id %}" role="button">Borrar</a>
+                <a name="" id="" class="btn btn-primary" href="{% url 'rescate:edita' resc.id %}" role="button">Editar</a>
+           </div> 
+       </div>
+
+    {% endfor %}
+        
+{% endblock %}

@@ -1,0 +1,66 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock  %} | Mis perris  </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+        <header class="row  sticky-top">
+                <nav class="navbar col-12   navbar-expand-md">
+                    <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" width="260" height="52" alt="NO HAYs"></a>
+                    <button class="navbar-toggler   custom-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav text-center mx-auto ">
+                        <li class="nav-item active">
+                          <a class="nav-link btn btn-outline-light" href="{% url 'index' %}">Inicio</span></a>
+                        </li>
+                        <div class="dropdown ">
+                          <button class="btn btn-outline-light dropdown-toggle p-2" type="button" data-toggle="dropdown">Adopciones
+                          <span class="caret"></span></button>
+                          <ul class="dropdown-menu text-center">
+                            <li><a href="{% url 'adopcion:ver' %}">ver adopciones</a></li>
+                            <li><a href="{% url 'adopcion:asignar' %}">asignar adopcion</a></li>
+                          </ul>
+                        </div> 
+                        <div class="dropdown ">
+                          <button class="btn btn-outline-light dropdown-toggle p-2 ml-2" type="button" data-toggle="dropdown">Rescatados
+                          <span class="caret"></span></button>
+                          <ul class="dropdown-menu text-center">
+                            <li><a href="{% url 'rescate:ver' %}">Ver perritos rescatados</a></li>
+                            <li><a href="{% url 'rescate:crea' %}">Añadir rescatado</a></li>
+                          </ul>
+                        </div> 
+                        <li class="nav-item">
+                          <a class="nav-link nav-link btn btn-outline-light" href="{% url 'contacto' %}">Contacto</a>
+                        </li>
+                      </ul>
+                    </div>
+                    {% if not user.is_authenticated %}
+                    <a name="" id="" class="btn btn-outline-primary text-center mr-2 mt-2" href="{% url 'social:begin' 'facebook' %}" role="button"><i class="fab fa-facebook mr-2" style="font-size: 30px"></i>Ingresar con Facebook</a>
+                    {% else %}
+                    <p class="mr-2">{{user}}</p>
+                    <a class="btn btn-outline-danger" href="/salir/">Salir</a>
+                    {% endif %}
+                  </nav>
+            </header>
+            {% block content %}
+            <!-- CONTENIDO-->
+            {% endblock %}
+        <footer style="background: #A4A4A4"class="row p-3">
+          <span>Desarrollo web y mobile</span>
+             </footer>
+   <!-- FIN DEL CONTAINER -->   
+</div>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

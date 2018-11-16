@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% block title %}Rescate elimina{% endblock %}
+{% block content %}
+<form method="POST" class="Articulo2-2 col-12">
+    {% csrf_token %}
+    <div class="container-fluid p-5">
+        <div class="row">
+            <div class="col-12">
+                <h2>Deseea eliminar a este perrito de el registro ? </h2><p>{{perro.nombrePerro}}</p>
+            </div>
+            <button class="btn-success m-2 p-3" type="submit">SI</button>
+            <a name="" id="" class="btn btn-danger m-2 p-3" href="{% url 'rescate:ver' %}" role="button">NO</a>
+        </div>
+    </div>
+</form>
+{% endblock %}
